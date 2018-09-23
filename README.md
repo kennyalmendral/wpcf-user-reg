@@ -1,2 +1,2 @@
 # WordPress ClickFunnels User Registration
-Submit user data from a ClickFunnels form to a WordPress site to be used for registration.
+Capture user data from a ClickFunnels form to be used for registration on a WordPress site.
