@@ -29,58 +29,58 @@ if (is_plugin_active('wpcf-user-reg/wpcf-user-reg.php')) {
         if (wp_verify_nonce($_POST['nonce'], 'wpcfur_register')) {
             global $wpdb;
 
-			$full_name = trim($_POST['full_name']);
+            $full_name = trim($_POST['full_name']);
 
-			$split_full_name = explode(' ', $_POST['full_name']);
-			$first_name = trim($split_full_name[0]);
-			$last_name = trim($split_full_name[1]);
+            $split_full_name = explode(' ', $_POST['full_name']);
+            $first_name = trim($split_full_name[0]);
+            $last_name = trim($split_full_name[1]);
 
-			$email_address = trim($_POST['email_address']);
+            $email_address = trim($_POST['email_address']);
 
-			$default_password = trim(get_option('wpcfur_default_password'));
+            $default_password = trim(get_option('wpcfur_default_password'));
 
-			$check_email = count($wpdb->get_row("SELECT ID FROM {$wpdb->prefix}users WHERE user_email = '$email_address'"));
+            $check_email = count($wpdb->get_row("SELECT ID FROM {$wpdb->prefix}users WHERE user_email = '$email_address'"));
 
-			if ($check_email) {
-				$response = 'email_exists';
-			} else {
-				$userdata = array(
-					'user_login' => $email_address,
-					'user_email' => $email_address,
-					'user_pass' => $default_password,
-					'first_name' => $first_name,
-					'last_name' => $last_name,
-					'display_name' => $full_name
-				);
+            if ($check_email) {
+                $response = 'email_exists';
+            } else {
+                $userdata = array(
+                    'user_login' => $email_address,
+                    'user_email' => $email_address,
+                    'user_pass' => $default_password,
+                    'first_name' => $first_name,
+                    'last_name' => $last_name,
+                    'display_name' => $full_name
+                );
 
-				$user_id = wp_insert_user($userdata);
+                $user_id = wp_insert_user($userdata);
 
-				$headers[] = 'Content-Type: text/html; charset=UTF-8';
+                $headers[] = 'Content-Type: text/html; charset=UTF-8';
 
-				$subject = trim(get_option('wpcfur_email_subject'));
-				$template = trim(get_option('wpcfur_email_template'));
+                $subject = trim(get_option('wpcfur_email_subject'));
+                $template = trim(get_option('wpcfur_email_template'));
 
-				$template_placeholders = array(
-					'[name]', 
-					'[password]',
-					'[email]'
-				);
+                $template_placeholders = array(
+                    '[name]', 
+                    '[password]',
+                    '[email]'
+                );
 
-				$template_replacements = array(
-					$full_name,
-					$default_password,
-					$email_address
-				);
+                $template_replacements = array(
+                    $full_name,
+                    $default_password,
+                    $email_address
+                );
 
-				$message = str_replace($template_placeholders, $template_replacements, $template);
+                $message = str_replace($template_placeholders, $template_replacements, $template);
 
-				wp_mail($email_address, stripslashes($subject), stripslashes($message), $headers);
+                wp_mail($email_address, stripslashes($subject), stripslashes($message), $headers);
 
-				$response = 'success';
-			}
+                $response = 'success';
+            }
 
-			die($response);
-		}
+            die($response);
+        }
     }
 
     add_action('wp_ajax_wpcfur_register', 'wpcfur_register');
