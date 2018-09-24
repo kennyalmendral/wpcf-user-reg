@@ -1,0 +1,77 @@
+.toplevel_page_wpcfur #wpfooter {
+	display: none !important;
+}
+
+.wpcfur-admin .notice {
+	margin: 20px 0 0 !important;
+}
+
+.wpcfur-admin .trumbowyg-button-pane {
+	background: #fff !important;
+}
+
+.wpcfur-admin .section-title {
+    margin: 0;
+    color: #aaa !important;
+    letter-spacing: 2px;
+}
+
+.wpcfur #loading i {
+	font-size: 16px;
+}
+
+.wpcfur #loading span {
+	font-size: 16px;
+}
+
+.wpcfur .error {
+	color: #a94442;
+	background: #f2dede;
+	border: 1px solid #ebccd1;
+	border-radius: 6px;
+	padding: 10px 12px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wpcfur .error a {
+	color: #843534 !important;
+	font-weight: 700 !important;
+	text-decoration: none !important;
+}
+
+.wpcfur .error a:hover {
+	text-decoration: underline !important;
+}
+
+.wpcfur .error i {
+	font-size: 14px;
+	margin-right: 3px;
+}
+
+.wpcfur .info {
+	color: #31708f;
+	background: #d9edf7;
+	border: 1px solid #bce8f1;
+	border-radius: 6px;
+	padding: 10px 12px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wpcfur .info a {
+	color: #245269 !important;
+	font-weight: 700 !important;
+	text-decoration: none !important;
+}
+
+.wpcfur .info a:hover {
+	text-decoration: underline !important;
+}
+
+.wpcfur .info i {
+	font-size: 14px;
+	margin-right: 3px;
+}
