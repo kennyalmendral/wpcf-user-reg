@@ -21,7 +21,7 @@ In order for this plugin to work, the [ClickFunnels](https://wordpress.org/plugi
 3. Under **Redirect URL**, specify a URL that will be used as a thank you page upon successful registration.
 4. Open the active theme's `function.php` file, scroll at the very bottom and paste the following code snippet:
 
-```
+```php
 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
 if (is_plugin_active('wpcf-user-reg/wpcf-user-reg.php')) {
