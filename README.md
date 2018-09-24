@@ -3,7 +3,7 @@ Capture user data from a ClickFunnels form to be used for registration on a Word
 
 ## Instructions
 
-In order for this plugin to work, the [ClickFunnels](https://wordpress.org/plugins/clickfunnels/){:target="_blank"} WordPress plugin must be installed, activated and configured first (see below).
+In order for this plugin to work, the [ClickFunnels](https://wordpress.org/plugins/clickfunnels/) WordPress plugin must be installed, activated and configured first (see below).
 
 #### ClickFunnels Plugin Configuration
 
