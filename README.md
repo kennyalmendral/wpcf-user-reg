@@ -1,11 +1,9 @@
 # WordPress ClickFunnels User Registration
 Capture user data from a ClickFunnels form to be used for registration on a WordPress site.
 
-## Instructions
-
 In order for this plugin to work, the [ClickFunnels](https://wordpress.org/plugins/clickfunnels/) WordPress plugin must be installed, activated and configured first (see below).
 
-#### ClickFunnels Plugin Configuration
+## ClickFunnels Plugin Configuration
 
 1. Go to **Settings** and fill-up the **Account Email** and **Authentication Token** fields under **API Connection**.
 2. Go to **Pages** and click the **Add New** button.
